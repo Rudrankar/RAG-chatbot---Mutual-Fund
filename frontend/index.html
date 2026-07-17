@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDFC Mutual Fund FAQ Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar / Disclaimer Banner -->
+        <header class="app-header">
+            <div class="logo-container">
+                <span class="logo-icon">📊</span>
+                <h1 class="logo-title">HDFC FAQ Bot</h1>
+            </div>
+            
+            <div class="disclaimer-banner">
+                <div class="disclaimer-tag">CRITICAL COMPLIANCE</div>
+                <p class="disclaimer-text"><strong>Facts-only. No investment advice.</strong> This assistant answers verified objective questions exclusively from official scheme parameters.</p>
+            </div>
+            
+            <div class="corpus-info">
+                <h3>Indexed Schemes</h3>
+                <ul>
+                    <li>HDFC Mid-Cap Opportunities Fund</li>
+                    <li>HDFC Flexi Cap Fund</li>
+                    <li>HDFC Focused 30 Fund</li>
+                    <li>HDFC ELSS Tax Saver Fund</li>
+                    <li>HDFC Large Cap Fund</li>
+                </ul>
+            </div>
+            
+            <div class="footer-info">
+                <p>System Version 1.0.0</p>
+                <p>Source Data: groww.in</p>
+            </div>
+        </header>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <!-- Chat Feed Scroll View -->
+            <div class="chat-feed" id="chat-feed">
+                <!-- Welcome greeting -->
+                <div class="message system-message">
+                    <div class="welcome-box">
+                        <h2>Welcome to the Mutual Fund FAQ Assistant 👋</h2>
+                        <p>I can help you retrieve factual parameters about 5 indexed HDFC mutual fund schemes. Please click one of the example queries below or write your own objective question.</p>
+                        
+                        <div class="example-grid">
+                            <button class="example-chip" onclick="sendExample('What is the exit load for the HDFC Mid Cap Fund?')">
+                                <span>📋</span> What is the exit load for HDFC Mid Cap?
+                            </button>
+                            <button class="example-chip" onclick="sendExample('What is the minimum SIP for the HDFC ELSS Tax Saver?')">
+                                <span>💰</span> Minimum SIP for HDFC ELSS?
+                            </button>
+                            <button class="example-chip" onclick="sendExample('Should I invest in HDFC Large Cap Fund?')">
+                                <span>⚠️</span> Should I invest in HDFC Large Cap?
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Panel -->
+            <footer class="input-panel">
+                <div class="input-container">
+                    <input type="text" id="query-input" placeholder="Ask about exit loads, minimum SIPs, expense ratios..." autocomplete="off">
+                    <button id="send-btn" aria-label="Send query">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
